@@ -1,0 +1,528 @@
+/* @import url('https://fonts.googleapis.com/css?family=Lato&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #333;
+    color: #222;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    background-color: #779dc1;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    z-index: 999;
+}
+
+.circle {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    /* 相对定位 */
+    position: relative;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+}
+
+.circle button {
+    /* 鼠标放上变小手 */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    /* 变透明 */
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+
+.circle button:focus {
+    outline: none;
+}
+
+.circle button#open {
+    left: 60%;
+}
+
+.circle button#close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.container.show-nav+nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+nav ul li+li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+nav ul li+li+li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+nav a {
+    color: #fafafa;
+    /* 下划线消失 */
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+nav a:hover {
+    color: #FF7979;
+    font-weight: bold;
+}
+
+.content img {
+    max-width: 100%;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1 {
+    margin: 0;
+}
+
+.content small {
+    color: #555;
+    font-size: italic;
+}
+
+.content p {
+    color: #333;
+    line-height: 1.5s;
+}
+
+
+/* 先引入字体 */
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans'); */
+
+/* 初始化 */
+* {
+    /* 标准盒子模型 */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 使用字体 */
+    font-family: 'Open Sans', sans-serif;
+    /* 100%的窗口高度 */
+    height: 100vh;
+}
+
+.part2 {
+    margin-top: 0;
+    /* 相对定位 */
+    position: relative;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-slide {
+    height: 100%;
+    width: 35%;
+    /* 绝对定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 执行动画 让速度慢一点 */
+    transition: transform 0.5s ease-in-out;
+}
+
+.left-slide>div {
+    height: 100%;
+    width: 100%;
+    /* 弹性布局 */
+    display: flex;
+    /* 按照列排序 */
+    flex-direction: column;
+    /* 水平+垂直居中 */
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.left-slide h1 {
+    font-size: 40px;
+    /* 距离底部元素 */
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+/* 右边的 */
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    /* 执行动画 让速度慢一点 */
+    transition: transform 0.5s ease-in-out;
+}
+
+.right-slide>div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    /* 鼠标放上变小手 */
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+}
+
+button:hover {
+    color: #222;
+}
+
+button:focus {
+    outline: none;
+}
+
+.part2 .action-buttons .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.part2 .action-buttons .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.part2 .action-buttons button {
+    /* 绝对定位 */
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+}
+
+
+
+
+.a {
+    position: relative;
+    top: 100px;
+    width: 1000px;
+    height: 600px;
+    background-image: url(../images/yang.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.b,
+.c,
+.d,
+.e {
+    position: absolute;
+    width: 1000px;
+    height: 600px;
+    /* 设置阴影 */
+    filter: drop-shadow(4px 4px 12px rgba(0, 0, 0, .5));
+    background-size: cover;
+    opacity: .7;
+    transition: .5s;
+}
+
+.b::after,
+.c::after,
+.d::after,
+.e::after {
+    content: "";
+    position: absolute;
+    width: 1000px;
+    height: 600px;
+    background-image: url(../images/yang.jpg);
+}
+
+.b {
+    left: -400px;
+    transform: rotateZ(100deg);
+    overflow: hidden;
+    transition: all ease-in 1.5s;
+}
+
+.b::after {
+    transform: rotateZ(-100deg);
+}
+
+.c {
+    left: -400px;
+    transform: rotateZ(-100deg);
+    overflow: hidden;
+    transition: all ease-in 1.5s;
+}
+
+.c::after {
+    transform: rotateZ(100deg);
+}
+
+.d {
+    right: -400px;
+    transform: rotateZ(105deg);
+    overflow: hidden;
+    transition: all ease-in 1.5s;
+}
+
+.d::after {
+    transform: rotateZ(-105deg);
+}
+
+.e {
+    right: -400px;
+    transform: rotateZ(-100deg);
+    overflow: hidden;
+    transition: all ease-in 1.5s;
+}
+
+.e::after {
+    transform: rotateZ(100deg);
+}
+
+.f {
+    opacity: 0;
+    font: 900 50px '';
+    /* 设置字体间距 */
+    letter-spacing: 10px;
+    color: rgb(60, 60, 70);
+    transition: 1s;
+    z-index: 1;
+}
+
+/* 设置动画 */
+.a:hover .b {
+    left: -550px;
+}
+
+.a:hover .c {
+    left: -600px;
+}
+
+.a:hover .d {
+    right: -550px;
+}
+
+.a:hover .e {
+    right: -610px;
+}
+
+.a:hover .f {
+    opacity: 1;
+}
+
+.part1 {
+    margin: 0 auto;
+}
+
+.keyboard{
+    font-size: 20px;
+    display: flex;
+    padding-top: 200px;
+    flex-direction: column;
+    align-items: center;
+}
+.row{
+    display: flex;
+    /* 去掉li前面的点 */
+    list-style: none;
+}
+.keyboard li{
+    height: 3em;
+    width: 3em;
+    color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.4em;
+    /* 字间距 */
+    letter-spacing: 1px;
+    margin: 0.4em;
+    text-align: center;
+    line-height: 3em;
+    font-size: 1em;
+}
+#tab{
+    width: 5em;
+}
+#caps{
+    width: 6em;
+}
+#left-shift,
+#right-shift
+{
+    width: 8em;
+}
+#enter{
+    width: 6em;
+}
+#back{
+    width: 5em;
+}
+.pinky{
+    background-color: crimson;
+    border: 2px solid crimson;
+}
+.ring{
+    background-color: coral;
+    border: 2px solid coral;
+}
+.middle{
+    background-color: darkorange;
+    border: 2px solid darkorange;
+}
+.pointer1st{
+    background-color: gold;
+    border: 2px solid gold;
+}
+.pointer2nd{
+    background-color: khaki;
+    border: 2px solid khaki;
+}
+.hit{
+    animation: hit 0.3s both;
+}
+@keyframes hit {
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.pinky.selected{
+    color: crimson;
+}
+.ring.selected{
+    color: coral;
+}
+.middle.selected{
+    color: darkorange;
+}
+.pointer1st.selected{
+    color: gold;
+}
+.pointer2nd.selected{
+    color: khaki;
+}
+
+.keyboard .selected{
+    background-color: transparent;
+    animation: vibrate 0.3s linear infinite both;
+}
+@keyframes vibrate {
+    0%{
+        transform: translate(0);
+    }
+    20%{
+        transform: translate(-2px,2px);
+    }
+    40%{
+        transform: translate(-2px,-2px);
+    }
+    60%{
+        transform: translate(2px,2px);
+    }
+    80%{
+        transform: translate(2px,-2px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.fa-bars::after{
+    font-size: large;
+    font-weight: bolder;
+    content: '三';
+}
+
+.fa-times::after{
+    font-size: large;
+    font-weight: bolder;
+    content: 'X';
+}
+
+.up-button::after{
+    font-weight: bolder;
+    content: '↑';
+}
+
+.down-button::after{
+    font-weight: bolder;
+    content: '↓';
+}

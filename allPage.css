@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?jhyk3m');
+    src: url('../fonts/icomoon.eot?jhyk3m#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?jhyk3m') format('truetype'),
+        url('../fonts/icomoon.woff?jhyk3m') format('woff'),
+        url('../fonts/icomoon.svg?jhyk3m#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tzl-footer {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.tzl-layout {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer-body {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    max-width: 1280px;
+    padding: 30px 46px 20px;
+}
+
+.footer-item {
+    padding: 0 10px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.footer-item:nth-child(4) {
+    width: auto;
+    flex-grow: 1;
+}
+
+
+.footer-itemtitle {
+    margin-bottom: 30px;
+    color: var(--color-text-1);
+    font-weight: 600;
+}
+
+.footer-col2 {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 120px;
+    margin-right: -20px;
+}
+
+.footer-itemtext {
+    line-height: 26px;
+    white-space: nowrap;
+}
+
+.footer-col2 .footer-itemtext {
+    margin-right: 10px;
+}
+
+.footer-itemtext a,
+.footer-itemtext span {
+    color: var(--color-text-2);
+}
+
+.tzl-qrcode {
+    display: flex;
+    align-items: center;
+}
+
+.tzl-qrcode-vertical {
+    display: block;
+    width: 130px;
+}
+
+.tzl-qrcode-code {
+    margin: 0 auto;
+
+    width: 120px;
+    height: 120px;
+    margin-right: 8px;
+    position: relative;
+}
+
+.tzl-qrcode-img {
+    height: 100%;
+}
+
+.tzl-qrcode-text {
+    text-align: center;
+    margin-top: 20px;
+    white-space: nowrap;
+}
+
+.tzl-qrcode-title {
+    font-size: 16px;
+    color: var(--color-active);
+}
+
+.tzl-qrcode-subtitle {
+    font-size: 16px;
+    margin-top: 8px;
+    color: var(--color-text-2);
+}
+
+.footer-bottom {
+    text-align: left;
+    padding-top: 40px;
+    border-top: 1px solid var(--color-border-1);
+}
+
+.footer-copyright {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-text-2) !important;
+    text-align: center;
+}
+
+.footer-licence {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.footer-licence a+a {
+    margin-left: 10px impa !important;
+}
+
+.el-backtop,
+.el-calendar-table td.is-today {
+    color: #409eff;
+}
+
+.el-backtop {
+    right: 40px;
+    bottom: 40px;
+    position: fixed;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .12);
+    cursor: pointer;
+    z-index: 5;
+    opacity: 0;
+}
+
+.apper {
+    opacity: 1;
+    transition: all 3s;
+}
+
+.iconfont {
+    user-select: none;
+    font-family: "icomoon";
+    font-style: normal;
+    margin-right: 4px;
+    margin-top: 0;
+    display: inline-block;
+    transition: none;
+    cursor: default;
+}
+
+.icon-top {
+    color: #409eff;
+    width: 100%;
+    background-color: rgb(242, 245, 246);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 6px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon-menu{
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 70px;
+    right: 40px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.menu>span {
+    margin: 0;
+    font-family: "icomoon";
+    font-size: xx-large;
+    color: #EF6D57
+}
+
+
+.nav {
+    top: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    flex-direction: column;
+    background: hsla(0, 0%, 100%, .86);
+    transition: top .3s cubic-bezier(.25, .5, .5, .9);
+}
+
+.nav-list {
+    width: 80%;
+    display: block;
+    text-align: center;
+    margin-top: -120px;
+}
+
+.nav-list>li {
+    margin: 0 20px 20px;
+    list-style: none;
+    display: inline-block;
+}
+
+.tips-mark {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    position: relative;
+}
+
+.tips-mark>p {
+    color: #666;
+}
+
+.tips-mark:hover .tips-tit {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.tips-mark::before {
+    content: "";
+    height: 6px;
+    width: 6px;
+    background: #f16339;
+    border-radius: 50%;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 0 4px rgba(241, 99, 57, .1);
+    margin: 2px 8px;
+    -webkit-animation: flash 8s infinite;
+    animation: flash 8s infinite;
+}
+
+@keyframes flash {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+.nav-list li a {
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.tips-tit {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 12px;
+    background: #ef6d57;
+    color: #fff;
+    bottom: 100%;
+    left: 100%;
+    border-radius: 20px;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 26px;
+    margin-bottom: 6px;
+    transition: all .4s cubic-bezier(.18, .89, .32, 1.28);
+    transform-origin: left bottom;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.tips-tit::before {
+    content: "";
+    border-color: transparent #ef6d57 transparent transparent;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    position: absolute;
+    left: 10px;
+    top: 22px;
+    transform: rotate(188deg);
+}
+
+.nav .world {
+    position: absolute;
+    bottom: 30px;
+    display: block;
+    text-align: center;
+    color: #666;
+}
+
+.nav .world p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.world .tips-mark:hover {
+    cursor: default;
+}
+
+.dis-none {
+    display: none;
+}

@@ -1,0 +1,205 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yang's Page</title>
+        <link rel="stylesheet" href="./css/Yang.css">
+        <link rel="stylesheet" href="./css/allPage.css">
+
+        <script src="./js/Yang.js"></script>
+        <script src="./js/allPage.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="circle-container">
+                <div class="circle">
+                    <button id="close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button id="open">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="part1 a">
+                <div class="b"></div>
+                <div class="c"></div>
+                <div class="d"></div>
+                <div class="e"></div>
+                <p class="f">WELCOME TO MY PAGE</p>
+            </div>
+            <div class="part2 hidden">
+                <div class="left-slide">
+                    <div style="background-color:#f00;">
+                        <h1>Red Ferrari</h1>
+                        <p>all in Red</p>
+                    </div>
+                    <div style="background-color:#da0;">
+                        <h1>Sunset dusk</h1>
+                        <p>in the sunset</p>
+                    </div>
+                    <div style="background-color:#252E33;">
+                        <h1>Lonely castle</h1>
+                        <p>in the wilderness</p>
+                    </div>
+                    <div style="background-color:#037;">
+                        <h1>Bluuue Sky</h1>
+                        <p>with it's mountains</p>
+                    </div>
+                </div>
+                <div class="right-slide">
+                    <div style="background-image: url('./images/m1.jpg')">
+                    </div>
+                    <div style="background-image: url('./images/m4.jpg')">
+                    </div>
+                    <div style="background-image: url('./images/m3.jpg')">
+                    </div>
+                    <div style="background-image: url('./images/m2.jpg')">
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="down-button">
+                        <i class="fas fa-arrow-down"></i>
+                    </button>
+                    <button class="up-button">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="part3 keyboard hidden">
+                <!-- 一共三行 -->
+                <div class="row row-0">
+                    <li class="pinky" id="esc">~</li>
+                    <li class="pinky" id="1">1</li>
+                    <li class="ring" id="2">2</li>
+                    <li class="middle" id="3">3</li>
+                    <li class="pointer1st" id="4">4</li>
+                    <li class="pointer2nd" id="5">5</li>
+                    <li class="pointer2nd" id="6">6</li>
+                    <li class="pointer1st" id="7">7</li>
+                    <li class="middle" id="8">8</li>
+                    <li class="ring" id="9">9</li>
+                    <li class="pinky" id="0">0</li>
+                    <li class="pinky" id="-">-</li>
+                    <li class="pinky" id="+">+</li>
+                    <li class="pinky" id="back">BACK</li>
+                </div>
+                <div class="row row-1">
+                    <li class="pinky" id="tab">TAB</li>
+                    <li class="pinky" id="Q">Q</li>
+                    <li class="ring" id="W">W</li>
+                    <li class="middle" id="E">E</li>
+                    <li class="pointer1st" id="R">R</li>
+                    <li class="pointer2nd" id="T">T</li>
+                    <li class="pointer2nd" id="Y">Y</li>
+                    <li class="pointer1st" id="U">U</li>
+                    <li class="middle" id="I">I</li>
+                    <li class="ring" id="O">O</li>
+                    <li class="pinky" id="P">P</li>
+                    <li class="pinky" id="[">[</li>
+                    <li class="pinky" id="]">]</li>
+                    <li class="pinky" id="\">\</li>
+                </div>
+                <div class="row row-2">
+                    <li class="pinky" id="caps">CAPS</li>
+                    <li class="pinky" id="A">A</li>
+                    <li class="ring" id="S">S</li>
+                    <li class="middle" id="D">D</li>
+                    <li class="pointer1st" id="F">F</li>
+                    <li class="pointer2nd" id="G">G</li>
+                    <li class="pointer2nd" id="H">H</li>
+                    <li class="pointer1st" id="J">J</li>
+                    <li class="middle" id="K">K</li>
+                    <li class="ring" id="L">L</li>
+                    <li class="pinky" id=";">;</li>
+                    <li class="pinky" id="'">'</li>
+                    <li class="pinky" id="enter">ENTER</li>
+                </div>
+                <div class="row row-3">
+                    <li class="pinky" id="left-shift">SHIFT</li>
+                    <li class="pinky" id="Z">Z</li>
+                    <li class="ring" id="X">X</li>
+                    <li class="middle" id="C">C</li>
+                    <li class="pointer1st" id="V">V</li>
+                    <li class="pointer2nd" id="B">B</li>
+                    <li class="pointer2nd" id="N">N</li>
+                    <li class="pointer1st" id="M">M</li>
+                    <li class="middle" id=",">,</li>
+                    <li class="ring" id=".">.</li>
+                    <li class="pinky" id="/">/</li>
+                    <li class="pinky" id="right-shift">SHIFT</li>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><i class="fas fa-home"><a href="#">case1</a></i></li>
+                <li><i class="fas fa-user"><a href="#">case2</a></i></li>
+                <li><i class="fas fa-envelope"><a href="#">case3</a></i></li>
+            </ul>
+        </nav>
+        <div class="el-backtop">
+            <div class="iconfont icon-top"></div>
+        </div>
+        <div class="nav-box">
+            <div class="menu">
+                <span class="iconfont icon-menu "></span>
+                <span class="iconfont icon-menu dis-none"></span>
+            </div>
+            <div class="nav">
+                <ul class="nav-list">
+                    <li>
+                        <div class="tips-mark">
+                            <a href="index.html">Home</a>
+                            <div class="tips-tit">首页</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tips-mark">
+                            <a href="Yang.html">Yang's page</a>
+                            <div class="tips-tit">网页名</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tips-mark">
+                            <a href="Li.html">Li's page</a>
+                            <div class="tips-tit">网页名</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tips-mark">
+                            <a href="Liu.html">Liu's page</a>
+                            <div class="tips-tit">网页名</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tips-mark">
+                            <a href="login.html">Login</a>
+                            <div class="tips-tit">登录页面</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="world">
+                    <div class="tips-mark">
+                        <p>You are the 1st visitor on this site!</p>
+                        <div class="tips-tit">
+                            <p>您是本网站第1位访客</p>
+                        </div>
+                    </div>
+                    <div class="tips-mark">
+                        <p>Sometimes you need to applaud yourself.</p>
+                        <div class="tips-tit">
+                            <p>有时候需要为自己鼓掌.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    </html>
