@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #define MAX_LINE 80
-#define MAX_TEXT INT_MAX
+#define MAX_TEXT 1000
 
 void print_lines(char text[]);
 void count_chars(char text[]);
@@ -12,56 +12,56 @@ void count_string(char text[], char search_string[]);
 void remove_substring(char text[], char substring[]);
 
 int main() {
-    // ¶ÁÈ¡ÓÃ»§ÊäÈëµÄÎÄÕÂ
-    printf("ÇëÊäÈëÒ»Ò³ÎÄ×Ö£º\n"); 
+    // è¯»å–ç”¨æˆ·è¾“å…¥çš„æ–‡ç« 
+    printf("è¯·è¾“å…¥ä¸€é¡µæ–‡å­—ï¼š\n"); 
     char text[MAX_TEXT];
     fgets(text, MAX_TEXT, stdin);
 	
-     // Ìí¼Ó switch Ñ¡Ôñ½á¹¹£¬·½±ãÑ¡Ôñ²»Í¬µÄ²Ù×÷
+     // æ·»åŠ  switch é€‰æ‹©ç»“æ„ï¼Œæ–¹ä¾¿é€‰æ‹©ä¸åŒçš„æ“ä½œ
      while(1){
      	int choice;
-	    printf("------------------------------ÇëÑ¡Ôñ²Ù×÷£º----------------------------------------\n");
-	    printf("------------------------------1. ·ÖĞĞÊä³öÎÄÕÂ-------------------------------------\n");
-	    printf("------------------------------2. Í³¼Æ×ÖÄ¸¡¢¿Õ¸ñ¡¢Êı×ÖºÍ×Ü×ÖÊı---------------------\n");
-	    printf("------------------------------3. ËÑË÷×Ö·û´®³öÏÖ´ÎÊı-------------------------------\n");
-	    printf("------------------------------4. É¾³ı×Ö·û´®---------------------------------------\n");
-	    printf("------------------------------5. ÍË³öÏµÍ³-----------------------------------------\n");
+	    printf("------------------------------è¯·é€‰æ‹©æ“ä½œï¼š----------------------------------------\n");
+	    printf("------------------------------1. åˆ†è¡Œè¾“å‡ºæ–‡ç« -------------------------------------\n");
+	    printf("------------------------------2. ç»Ÿè®¡å­—æ¯ã€ç©ºæ ¼ã€æ•°å­—å’Œæ€»å­—æ•°---------------------\n");
+	    printf("------------------------------3. æœç´¢å­—ç¬¦ä¸²å‡ºç°æ¬¡æ•°-------------------------------\n");
+	    printf("------------------------------4. åˆ é™¤å­—ç¬¦ä¸²---------------------------------------\n");
+	    printf("------------------------------5. é€€å‡ºç³»ç»Ÿ-----------------------------------------\n");
 	    scanf("%d", &choice);
 	    switch (choice) {
-	        case 1:  // ·ÖĞĞÊä³öÓÃ»§ÊäÈëµÄ¸÷ĞĞ×Ö·û
+	        case 1:  // åˆ†è¡Œè¾“å‡ºç”¨æˆ·è¾“å…¥çš„å„è¡Œå­—ç¬¦
 	            print_lines(text);
 	            break;
-	        case 2:  // Í³¼ÆÎÄÕÂÖĞµÄ×ÖÄ¸Êı¡¢¿Õ¸ñÊı¡¢Êı×ÖÊıºÍ×Ü×ÖÊı
+	        case 2:  // ç»Ÿè®¡æ–‡ç« ä¸­çš„å­—æ¯æ•°ã€ç©ºæ ¼æ•°ã€æ•°å­—æ•°å’Œæ€»å­—æ•°
 	            count_chars(text);
 	            count_spaces(text);
 	            count_nums(text);
 	            break;
-	        case 3:  // Í³¼ÆÄ³Ò»×Ö·û´®ÔÚÎÄÕÂÖĞ³öÏÖµÄ´ÎÊı
+	        case 3:  // ç»Ÿè®¡æŸä¸€å­—ç¬¦ä¸²åœ¨æ–‡ç« ä¸­å‡ºç°çš„æ¬¡æ•°
 	            char search_string[MAX_TEXT];
-	            printf("ÇëÊäÈëÒªËÑË÷µÄ×Ö·û´®£º");
+	            printf("è¯·è¾“å…¥è¦æœç´¢çš„å­—ç¬¦ä¸²ï¼š");
 	            scanf("%s", search_string);
 	            count_string(text, search_string);
 	            break;
-	        case 4:  // É¾³ıÄ³Ò»×Ó´®£¬²¢½«ºóÃæµÄ×Ö·ûÇ°ÒÆ
+	        case 4:  // åˆ é™¤æŸä¸€å­ä¸²ï¼Œå¹¶å°†åé¢çš„å­—ç¬¦å‰ç§»
 	            char substring[MAX_TEXT];
-	            printf("ÇëÊäÈëÒªÉ¾³ıµÄ×Ó´®£º");
+	            printf("è¯·è¾“å…¥è¦åˆ é™¤çš„å­ä¸²ï¼š");
 	            scanf("%s", substring);
 	            remove_substring(text, substring);
-	            printf("É¾³ı×Ó´®ºóµÄÎÄÕÂ£º\n");
-	            print_lines(text);  // Êä³öÉ¾³ı×Ó´®ºóµÄÎÄÕÂ
+	            printf("åˆ é™¤å­ä¸²åçš„æ–‡ç« ï¼š\n");
+	            print_lines(text);  // è¾“å‡ºåˆ é™¤å­ä¸²åçš„æ–‡ç« 
 	            break;
 	        case 5:
 	        	exit(0); 
 	    		break;
 	        default:
-	            printf("ÇëÊäÈëÕıÈ·µÄ²Ù×÷±àºÅ\n");
+	            printf("è¯·è¾“å…¥æ­£ç¡®çš„æ“ä½œç¼–å·\n");
 	            break;
 	    }
 	 }
     return 0;
 }
 
-// ·ÖĞĞÊä³öÓÃ»§ÊäÈëµÄ¸÷ĞĞ×Ö·û
+// åˆ†è¡Œè¾“å‡ºç”¨æˆ·è¾“å…¥çš„å„è¡Œå­—ç¬¦
 void print_lines(char text[]){
     int i;
     int len = strlen(text);
@@ -76,7 +76,7 @@ void print_lines(char text[]){
     }
 }
 
-// Í³¼ÆÎÄÕÂÖĞµÄ×ÖÄ¸Êı
+// ç»Ÿè®¡æ–‡ç« ä¸­çš„å­—æ¯æ•°
 void count_chars(char text[]) {
     int i;
     int len = strlen(text);
@@ -87,10 +87,10 @@ void count_chars(char text[]) {
             count++;
         }
     }
-    printf("È«²¿×ÖÄ¸Êı£º%d\n", count);
+    printf("å…¨éƒ¨å­—æ¯æ•°ï¼š%d\n", count);
 }
 
-// Í³¼ÆÎÄÕÂÖĞµÄ¿Õ¸ñÊı
+// ç»Ÿè®¡æ–‡ç« ä¸­çš„ç©ºæ ¼æ•°
 void count_spaces(char text[]) {
     int i;
     int len = strlen(text);
@@ -100,10 +100,10 @@ void count_spaces(char text[]) {
             count++;
         }
     }
-    printf("¿Õ¸ñ¸öÊı£º%d\n", count);
+    printf("ç©ºæ ¼ä¸ªæ•°ï¼š%d\n", count);
 }
 
-// Í³¼ÆÎÄÕÂÖĞµÄÊı×ÖÊı
+// ç»Ÿè®¡æ–‡ç« ä¸­çš„æ•°å­—æ•°
 void count_nums(char text[]) {
     int i;
     int len = strlen(text);
@@ -113,10 +113,10 @@ void count_nums(char text[]) {
             count++;
         }
     }
-    printf("Êı×Ö¸öÊı£º%d\n", count);
+    printf("æ•°å­—ä¸ªæ•°ï¼š%d\n", count);
 }
 
-// Í³¼ÆÄ³Ò»×Ö·û´®ÔÚÎÄÕÂÖĞ³öÏÖµÄ´ÎÊı
+// ç»Ÿè®¡æŸä¸€å­—ç¬¦ä¸²åœ¨æ–‡ç« ä¸­å‡ºç°çš„æ¬¡æ•°
 void count_string(char text[], char search_string[]) {
     int i, j;
     int count = 0;
@@ -133,10 +133,10 @@ void count_string(char text[], char search_string[]) {
             count++;
         }
     }
-    printf("'%s' ³öÏÖµÄ´ÎÊı£º%d\n", search_string, count);
+    printf("'%s' å‡ºç°çš„æ¬¡æ•°ï¼š%d\n", search_string, count);
 }
 
-// É¾³ıÄ³Ò»×Ó´®£¬²¢½«ºóÃæµÄ×Ö·ûÇ°ÒÆ
+// åˆ é™¤æŸä¸€å­ä¸²ï¼Œå¹¶å°†åé¢çš„å­—ç¬¦å‰ç§»
 void remove_substring(char text[], char substring[]) {
     int i, j, k;
     int text_len = strlen(text);
